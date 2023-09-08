@@ -44,5 +44,16 @@ profit_by_catagory_piechart = px.pie(profit_by_catagory, names=profit_by_catagor
 left_column,right_column = st.columns(2)
 left_column.plotly_chart(profit_by_catagory_barchart,use_container_width=True)
 right_column.plotly_chart(profit_by_catagory_piechart,use_container_width=True)
-print(profit_by_catagory)
 
+
+
+hide= """ 
+    <style>
+    #MainMenu {visibility:hidden;}
+    footer {visibility:hidden;}
+    header {visibility:hidden;}
+</style
+
+"""
+
+st.markdown(hide,unsafe_allow_html=True)
